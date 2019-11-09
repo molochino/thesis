@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Аналитика</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Дипломная работа Я.Практикум. Поиск упоминаний в новостях"> 
+    <meta name="author" content="Булатасов Игорь">    
+    <link rel="shortcut icon" href="<%=require('../src/images/favicon.png')%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.paper.css %>">
+</head>
+<body>  
+    <div class="page">
+        <header class="header header_different-underline">
+            <a class="link header__logo header__logo_about" href="./index.html">NewsAnalyzer</a>
+            <div class="header__links-container">
+                <a class="link header__link header__link_analytics" href="./index.html">Главная</a>
+                <a class="link header__link header__link_analytics" href="./about.html">О проекте</a>
+            </div>
+        </header>
+
+        <section class="stats">  
+            <div class="stats__path">   
+                <a href="./index.html" class="link stats__link">Главная</a>                
+                <p class="stats__analytics-text">/ Аналитика</p>   
+            </div>          
+            
+            
+            <h1 class="title stats__title">Вы спросили: "Путешествия"</h1>
+            <p class="stats__text">
+                Новостей за неделю: 
+                <span class="stats__numbers">34324</span>
+            </p>
+            <p class="stats__text">
+                Упоминаний в заголовках:
+                <span class="stats__numbers">235</span>
+            </p>
+        </section>
+
+        <section class="analytics">
+            <h2 class="analytics__title">Аналитика по дням</h2>            
+
+            <div class="analytics__chart"> 
+                <p class="analytics__chart-header">Дата <br> (август)</p>
+                <p class="analytics__chart-header">Кол-во упоминаний</p> 
+                
+                <div class="analytics__line"></div>
+                
+                <div class="analytics__mention-numbers-container">
+                    <p class="analytics__chart-header">0</p>
+                    <p class="analytics__chart-header">25</p>
+                    <p class="analytics__chart-header">50</p>
+                    <p class="analytics__chart-header">75</p>
+                    <p class="analytics__chart-header">100</p>
+                </div>
+                
+                <p class="analytics__date">19, пн</p>
+                <p class="analytics__mentions" style="width: calc(100% / 100 * 15)">15</p>                
+
+                <p class="analytics__date">20, вт</p>
+                <p class="analytics__mentions" style="width: calc(100%  / 100 * 18)">18</p>
+
+                <p class="analytics__date">21, ср</p>
+                <p class="analytics__mentions" style="width: calc(100% / 100 * 11)">11</p>
+
+                <p class="analytics__date">22, чт</p>
+                <p class="analytics__mentions" style="width: calc(100% / 100 * 39)">39</p>
+
+                <p class="analytics__date">23, пт</p>
+                <p class="analytics__mentions" style="width: calc(100%  / 100 * 45)">45</p>
+
+                <p class="analytics__date">24, сб</p>
+                <p class="analytics__mentions" style="width: calc(100% / 100 * 73)">73</p>
+
+                <p class="analytics__date">25, вс</p>
+                <p class="analytics__mentions" style="width: calc(100% / 100 * 34)">34</p>   
+                
+                <div class="analytics__mention-numbers-container analytics__mention-numbers-container_bottom">
+                    <p class="analytics__chart-header">0</p>
+                    <p class="analytics__chart-header">25</p>
+                    <p class="analytics__chart-header">50</p>
+                    <p class="analytics__chart-header">75</p>
+                    <p class="analytics__chart-header">100</p>
+                </div>
+            </div>            
+        </section>
+
+        <footer class="footer">
+            <p class=footer__copyright>© 2019  Supersite</p>
+            <div class="footer__links-container">
+                <a href="./index.html" class="link footer__link">Главная</a>
+                <a href="./about.html" class="link footer__link">О проекте</a>
+                <a href="https://praktikum.yandex.ru/" class="link footer__link" target="_blank">Яндекс.Практикум</a>
+            </div>
+            <div class="footer__icons-container">
+                <a href="https://github.com/" target="_blank">
+                    <img class="footer__icon" src="<%=require('../src/images/github.png')%>" alt="Иконка Github">
+                </a>
+                
+                <a href="https://www.facebook.com/yandex.praktikum/" target="_blank">
+                    <img class="footer__icon" src="<%=require('../src/images/facebook.png')%>" alt="Иконка Facebook">
+                </a>                
+            </div>
+        </footer>
+    </div> 
+    
+    <script src="<%= htmlWebpackPlugin.files.chunks.paper.entry %>"></script>
+</body>
+</html>
