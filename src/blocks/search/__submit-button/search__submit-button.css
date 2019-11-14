@@ -1,0 +1,40 @@
+.search__submit-button {
+    position: absolute;
+    right: 0;
+    width: 168px;
+    height: 64px;
+    border-radius: 100px;
+    border-color: transparent;
+    background: #2F71E5;  
+    color: #ffffff;  
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+.search__submit-button:hover {
+    cursor: pointer;
+    background: #347EFF;
+}
+  
+.search__submit-button:active {  
+    background: #2A65CC;
+    outline: none;
+}
+  
+.search__submit-button:focus {  
+    outline: none;
+}
+
+@media screen and (max-width: 872px) {    
+    .search__submit-button {
+      height: 56px;
+    }
+}
+
+@media screen and (max-width: 540px) {    
+    .search__submit-button {
+      top: 72px;
+      width: 288px;
+      font-size: 18px;
+    }
+}

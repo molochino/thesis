@@ -1,0 +1,20 @@
+.glide__bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;    
+    border: none;    
+    background-color: #D1D2D6;;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;    
+}
+
+.glide__bullet:active {
+    outline: none;
+}
+
+.glide__bullet:focus {
+    outline: none;
+}

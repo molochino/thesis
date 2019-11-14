@@ -1,0 +1,18 @@
+.analytics__chart {
+    display: grid;
+    position: relative;
+    grid-template-columns: 104px calc(100% - 104px);
+    grid-auto-columns: minmax(min-content, max-content);
+    row-gap: 56px;    
+    width: 100%;
+    justify-content: center; 
+    margin-top: 48px;
+} 
+
+@media screen and (max-width: 320px) {    
+    .analytics__chart {
+        margin-top: 16px;
+        grid-template-columns: 64px calc(100% - 64px);
+        row-gap: 24px;
+    }
+}

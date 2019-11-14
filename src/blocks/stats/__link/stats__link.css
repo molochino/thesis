@@ -1,0 +1,11 @@
+.stats__link {
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.stats__link:hover {
+    font-weight: bold;
+}

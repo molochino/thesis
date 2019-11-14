@@ -1,0 +1,28 @@
+@import url('./__path/stats__path.css');
+@import url('./__analytics-text/stats__analytics-text.css');
+@import url('./__link/stats__link.css');
+@import url('./__title/stats__title.css');
+@import url('./__text/stats__text.css');
+@import url('./__numbers/stats__numbers.css');
+
+.stats {
+    padding-top: 40px;
+    padding-left: 104px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .stats {
+        padding-top: 32px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .stats {
+        padding-top: 16px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+    }
+}

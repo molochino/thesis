@@ -1,0 +1,14 @@
+.commits__name {
+    margin: 0;
+    font-family: Roboto Slab, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {    
+    .commits__name {
+        font-size: 20px;
+    }
+}

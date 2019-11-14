@@ -1,0 +1,7 @@
+.header__link_theme_about {
+    color: #B6BCBF;
+}
+
+.header__link_theme_about:hover {
+    color: #1a1b22;
+}

@@ -1,0 +1,19 @@
+.commits__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 1000px;
+    margin-right: 16px;
+}
+
+@media screen and (max-width: 768px) {    
+    .commits__avatar {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media screen and (max-width: 580px) {    
+    .commits__avatar {
+        margin-right: 8px;
+    }
+}

@@ -1,0 +1,24 @@
+.author__info {  
+    margin: 0;
+    margin-top: 51px;
+    margin-left: 56px;
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 872px) {    
+    .author__info {
+      margin-top: 2px;
+      margin-left: 32px;
+      margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 540px) {    
+    .author__info {
+      margin-top: 24px;
+      margin-left: 16px;
+      margin-right: 16px;
+      line-height: 24px;    
+    }
+}

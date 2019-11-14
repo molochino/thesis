@@ -1,0 +1,10 @@
+.clients__paragraph {  
+    margin: 0; 
+    margin-bottom: 24px;    
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px; 
+    color: #1A1B22;
+    line-height: 24px;
+}

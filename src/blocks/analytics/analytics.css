@@ -1,0 +1,35 @@
+@import url('./__title/analytics__title.css');
+@import url('./__chart-header/analytics__chart-header.css');
+@import url('./__line/analytics__line.css');
+@import url('./__mention-numbers-container/analytics__mention-numbers-container.css');
+@import url('./__mention-numbers-container/_bottom/analytics__mention-numbers-container_bottom.css');
+@import url('./__chart/analytics__chart.css');
+@import url('./__date/analytics__date.css');
+@import url('./__mentions/analytics__mentions.css');
+
+.analytics {
+    width: auto;
+    background: #F5F6F7;
+    padding-left: 104px; 
+    padding-right: 104px; 
+    padding-top: 80px;  
+    padding-bottom: 115px;
+}
+
+@media screen and (max-width: 768px) {
+    .analytics {
+        padding-top: 40px;
+        padding-right: 40px;
+        padding-bottom: 76px;
+        padding-left: 40px;        
+    }    
+} 
+
+@media screen and (max-width: 320px) {    
+    .analytics {
+        padding-top: 24px;
+        padding-right: 16px;
+        padding-bottom: 38px;
+        padding-left: 16px;        
+    }
+}

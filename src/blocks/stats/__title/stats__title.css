@@ -1,0 +1,19 @@
+.stats__title {
+    margin-top: 80px;
+    margin-bottom: 24px;   
+    width: fit-content; 
+}
+
+@media screen and (max-width: 768px) {    
+    .stats__title {
+        font-size: 32px;
+        margin-top: 64px;
+    }
+}
+
+@media screen and (max-width: 320px) {    
+    .stats__title {
+        font-size: 30px;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,9 @@
+.results__header-container {  
+    display: flex;  
+}
+
+@media screen and (max-width: 540px) {    
+    .results__header-container {
+      flex-direction: column;
+    }
+}

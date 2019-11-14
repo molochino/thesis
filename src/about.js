@@ -1,9 +1,6 @@
-import "./styles/about.css";
-import "./styles/header.css";
-import "./styles/author.css";
-import "./styles/footer.css";
-import "./styles/glide.core.css";
+import "./pages/about.css"
 import Glide from '@glidejs/glide';
+
 let glide = new Glide('.glide', {
 	perView: 3,
 	gap: 16,

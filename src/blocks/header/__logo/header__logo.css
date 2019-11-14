@@ -1,0 +1,21 @@
+.header__logo {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 104px;
+    width: fit-content;  
+    font-family: 'Roboto Slab', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 872px) {
+  .header__logo {
+    margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+  .header__logo {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+}

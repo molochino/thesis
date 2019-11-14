@@ -1,0 +1,10 @@
+.no-results__text {
+    width: fit-content;
+    margin: 0;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #B6BCBF;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+.results__more-button {
+    position: relative;
+    height: 64px;
+    width: 288px;
+    margin: auto;
+    margin-top: 64px;  
+    background: #ffffff;
+    border-radius: 80px;  
+}
+  
+.results__more-button:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.results__more-button:active {  
+  background-color: #d3d3d3;
+}
+
+@media screen and (max-width: 872px) {    
+    .results__more-button {
+      margin-top: 22px;    
+    }
+}
+
+@media screen and (max-width: 540px) {    
+    .results__more-button {
+      margin-top: 13px;
+    }  
+}
