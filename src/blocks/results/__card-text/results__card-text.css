@@ -1,0 +1,27 @@
+.results__card-text {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 16px; 
+    max-width: 500px; 
+    max-height: 110px;  
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;  
+    display: block;   
+    overflow: hidden; 
+    text-overflow: ellipsis;
+  
+    display: -webkit-box;
+    line-height: 22px;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 872px) {    
+    .results__card-text {
+      margin-top: 10px;
+      max-width: auto;
+      height: 88px;  
+      -webkit-line-clamp: 4;  
+    }
+}

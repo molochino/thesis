@@ -1,0 +1,28 @@
+.author__avatar {  
+    width: 464px;
+    margin-left: 104px;
+    height: 464px;  
+    border-radius: 1000px;  
+}
+
+@media screen and (max-width: 1230px) {
+    .author__avatar {
+      width: 400px;
+      height: 400px;
+    }  
+}
+
+@media screen and (max-width: 900px) {
+    .author__avatar {
+      width: 350px;
+      height: 350px;
+    }  
+}
+
+@media screen and (max-width: 872px) {      
+    .author__avatar {
+      margin-left: 40px;    
+      height: 232px;
+      width: 232px;
+    }    
+}

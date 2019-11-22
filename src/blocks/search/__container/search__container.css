@@ -1,0 +1,22 @@
+.search__container {
+    width: 608px;
+    margin: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 872px) {
+    .search__container {
+        width: 452px;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 540px) {  
+    .search__container {
+      width: 288px;
+    }
+}

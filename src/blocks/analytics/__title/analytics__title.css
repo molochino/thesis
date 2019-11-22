@@ -1,0 +1,16 @@
+.analytics__title {
+    font-family: Roboto Slab, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    width: fit-content;
+    margin: 0px;
+}
+
+@media screen and (max-width: 320px) {    
+    .analytics__title {
+        font-size: 22px;
+    }
+}

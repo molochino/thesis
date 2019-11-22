@@ -1,0 +1,10 @@
+.stats__path {
+    display: flex;
+    width: fit-content;
+}
+
+@media screen and (max-width: 320px) {    
+    .stats__path {
+        display: none;
+    }
+}

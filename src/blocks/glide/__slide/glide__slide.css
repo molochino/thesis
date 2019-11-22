@@ -1,0 +1,8 @@
+.glide__slide {
+    margin: 0;
+    margin-right: 11px;
+}
+
+.glide__slide:hover {
+    cursor: pointer;
+}

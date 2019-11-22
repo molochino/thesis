@@ -1,0 +1,16 @@
+.analytics__mention-numbers-container {
+    position: absolute;
+    display: flex;
+    width: calc(100% - 104px);
+    top: 55px;
+    justify-content: space-between;   
+    margin-left: 105px; 
+}
+
+@media screen and (max-width: 320px) {    
+    .analytics__mention-numbers-container {
+        width: calc(100% - 64px);
+        margin-left: 64px; 
+        display: none;
+    }
+}

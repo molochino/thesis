@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>О проекте</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Дипломная работа Я.Практикум. Поиск упоминаний в новостях"> 
+    <meta name="author" content="Булатасов Игорь">    
+    <link rel="shortcut icon" href="<%=require('../src/images/favicon.png')%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">    
+</head>
+<body class="page">  
+    
+    <header class="header header_about-underline">
+        <a class="link header__logo header__logo_about" href="./index.html">NewsAnalyzer</a>
+        <div class="header__links-container">
+            <a class="link header__link header__link_theme_about" href="./index.html">Главная</a>
+            <a class="link header__link header__link_chosen header__link_theme_about header__link_theme_about_chosen" href="./about.html">О проекте</a>
+        </div>
+    </header>
+
+    <section class="clients">
+        <h1 class="clients__title title">Клиентам</h1>
+        <div class="clients__text">
+            <p class="clients__paragraph">
+                Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.
+            </p>
+            <p class="clients__paragraph">
+                Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и 
+                функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
+            </p>
+            <p class="clients__paragraph">
+                Карточки с новостями приходят с сервера и обрабатываются асинхронно. 
+                То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.
+            </p>
+            <p class="clients__paragraph">
+                При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. 
+                Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. 
+                Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.
+            </p>
+            <p class="clients__paragraph">
+                Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+            </p>
+        </div>            
+    </section>
+
+    <section class="technologies">
+        <h2 class="technologies__title title">Используемые технологии</h2>
+        <div class="technologies__container">
+            <div class="technologies__cell-1">
+                <p class="technologies__text">HTML</p>
+                <img src="<%=require('../src/images/html.png')%>" alt="Логотип HTML">
+            </div>
+
+            <div class="technologies__cell-1">
+                <p class="technologies__text">CSS</p>
+                <img src="<%=require('../src/images/css.png')%>" alt="Логотип CSS">
+            </div>  
+
+            <div class="technologies__cell-1">
+                <p class="technologies__text">Java Script</p>
+                <img class="technologies__js-logo" src="<%=require('../src/images/js.png')%>" alt="Логотип JavaScript">
+            </div>
+
+            <div class="technologies__cell-1">
+                <p class="technologies__text">Webpack</p>
+                <img src="<%=require('../src/images/webpack.png')%>" alt="Логотип Webpack">
+            </div>                 
+        </div>
+    </section>
+
+    <section class="author">
+        <img class="author__avatar" src="<%=require('../src/images/image_08.png')%>" alt="Аватар автора">
+        <div class="author__info">
+            <h2 class="author__title title">Об авторе</h2>
+            <p class="author__text">
+                Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.
+                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            </p>
+        </div>            
+    </section>
+
+    <section class="commits">
+        <div class="commits__header-container">
+            <h2 class="commits__title title">История коммитов из GitHub</h2>
+            <a class="link commits__link" href="https://github.com/molochino/thesis/commits/master" target="_blank" >Открыть в Github <img src="<%=require('../src/images/Path.png')%>" alt="Иконка пути" class="results__path-icon"></a>
+        </div>
+
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <a href="https://github.com/molochino/thesis/commit/bbe96270ea73a347cf963f7e58ac2ad1060e98d9" target="_blank" class="link commits__single-commit-link">
+                            <div class="commits__card">
+                                <p class="commits__date"> 14 августа, 2019</p>
+                                <div class="commits__profile">
+                                    <img class="commits__avatar" src="<%=require('../src/images/avatar_github.png')%>" alt="Аватар автора коммита">                                   
+                                    
+                                    <div class="commits__info">
+                                        <p class="commits__name">Антон Долинин</p>
+                                        <p class="commits__mail">anton@yandex.ru</p>   
+                                    </div>                                                                     
+                                </div>
+                                <p class="commits__text">
+                                    Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                                </p>
+                            </div>
+                        </a>                            
+                    </li>
+
+                    <li class="glide__slide">
+                        <a href="https://github.com/molochino/thesis/commit/bbe96270ea73a347cf963f7e58ac2ad1060e98d9" target="_blank" class="link commits__single-commit-link">
+                            <div class="commits__card">
+                                <p class="commits__date"> 14 августа, 2019</p>
+                                <div class="commits__profile">
+                                    <img class="commits__avatar" src="<%=require('../src/images/avatar_github.png')%>" alt="Аватар автора коммита">                                   
+                                    
+                                    <div class="commits__info">
+                                        <p class="commits__name">Антон Долинин</p>
+                                        <p class="commits__mail">anton@yandex.ru</p>   
+                                    </div>                                                                     
+                                </div>
+                                <p class="commits__text">
+                                    Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                                </p>
+                            </div>
+                        </a>                            
+                    </li>
+                    
+                    <li class="glide__slide">
+                        <a href="https://github.com/molochino/thesis/commit/bbe96270ea73a347cf963f7e58ac2ad1060e98d9" target="_blank" class="link commits__single-commit-link">
+                            <div class="commits__card">
+                                <p class="commits__date"> 14 августа, 2019</p>
+                                <div class="commits__profile">
+                                    <img class="commits__avatar" src="<%=require('../src/images/avatar_github.png')%>" alt="Аватар автора коммита">                                   
+                                    
+                                    <div class="commits__info">
+                                        <p class="commits__name">Антон Долинин</p>
+                                        <p class="commits__mail">anton@yandex.ru</p>   
+                                    </div>                                                                     
+                                </div>
+                                <p class="commits__text">
+                                    Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                                </p>
+                            </div>
+                        </a>                            
+                    </li>
+                        
+                    <li class="glide__slide">
+                        <a href="https://github.com/molochino/thesis/commit/bbe96270ea73a347cf963f7e58ac2ad1060e98d9" target="_blank" class="link commits__single-commit-link">
+                            <div class="commits__card">
+                                <p class="commits__date"> 14 августа, 2019</p>
+                                <div class="commits__profile">
+                                    <img class="commits__avatar" src="<%=require('../src/images/avatar_github.png')%>" alt="Аватар автора коммита">                                   
+                                    
+                                    <div class="commits__info">
+                                        <p class="commits__name">Антон Долинин</p>
+                                        <p class="commits__mail">anton@yandex.ru</p>   
+                                    </div>                                                                     
+                                </div>
+                                <p class="commits__text">
+                                    Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                                </p>
+                            </div>
+                        </a>                            
+                    </li>
+                            
+                    <li class="glide__slide">
+                        <a href="https://github.com/molochino/thesis/commit/bbe96270ea73a347cf963f7e58ac2ad1060e98d9" target="_blank" class="link commits__single-commit-link"> 
+                            <div class="commits__card">
+                                <p class="commits__date"> 14 августа, 2019</p>
+                                <div class="commits__profile">
+                                    <img class="commits__avatar" src="<%=require('../src/images/avatar_github.png')%>" alt="Аватар автора коммита">                                   
+                                    
+                                    <div class="commits__info">
+                                        <p class="commits__name">Антон Долинин</p>
+                                        <p class="commits__mail">anton@yandex.ru</p>   
+                                    </div>                                                                     
+                                </div>
+                                <p class="commits__text">
+                                    Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                                </p>
+                            </div>
+                        </a>                            
+                    </li>                                    
+                </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <img class="glide__arrows-image" src="<%=require('../src/images/slider-left.png')%>" alt="Слайдер назад">
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <img class="glide__arrows-image" src="<%=require('../src/images/slider-right.png')%>" alt="Слайдер вперед">
+                </button>
+            </div>
+
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+                <button class="glide__bullet glide__bullet_hidden" data-glide-dir="=3"></button>
+                <button class="glide__bullet glide__bullet_hidden" data-glide-dir="=4"></button>
+            </div>
+        </div>  
+        
+        <a href="https://github.com/molochino/thesis/commits/master" target="_blank" class='link commits__link_button'>
+            <div class="commits__button-github">
+                <p>Открыть в GitHub</p> 
+            </div>
+        </a>              
+    </section>
+
+    <footer class="footer">
+        <p class=footer__copyright>© 2019  Supersite</p>
+        <div class="footer__links-container">
+            <a href="./index.html" class="link footer__link">Главная</a>
+            <a href="./about.html" class="link footer__link">О проекте</a>
+            <a href="https://praktikum.yandex.ru/" class="link footer__link" target="_blank">Яндекс.Практикум</a>
+        </div>
+        <div class="footer__icons-container">
+            <a href="https://github.com/" target="_blank">
+                <img class="footer__icon" src="<%=require('../src/images/github.png')%>" alt="Иконка Github">
+            </a>
+            
+            <a href="https://www.facebook.com/yandex.praktikum/" target="_blank">
+                <img class="footer__icon" src="<%=require('../src/images/facebook.png')%>" alt="Иконка Facebook">
+            </a>                
+        </div>
+    </footer>    
+    
+    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>    
+</body>
+</html>

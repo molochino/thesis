@@ -1,0 +1,10 @@
+.glide__arrows-image {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    bottom: 0;
+    left: -10px;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+}

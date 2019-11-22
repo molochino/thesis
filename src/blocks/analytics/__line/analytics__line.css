@@ -1,0 +1,6 @@
+.analytics__line {
+    position: absolute;
+    top: 40px;
+    border: 1px solid #1A1B22;
+    width: 100%;
+}

@@ -1,0 +1,9 @@
+.glide__bullet_hidden {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .glide__bullet_hidden {
+        display: inline-block;
+    }    
+}

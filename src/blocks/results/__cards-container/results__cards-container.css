@@ -1,0 +1,28 @@
+.results__cards-container {
+    width: auto;
+    margin: auto;
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    column-gap: 16px;  
+    row-gap: 16px;    
+}
+
+@media screen and (max-width: 872px) {    
+    .results__cards-container {
+      column-gap: 8px;
+      margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .results__cards-container {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 540px) {    
+    .results__cards-container {
+      grid-template-columns: 1fr;
+    } 
+}

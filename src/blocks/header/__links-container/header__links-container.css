@@ -1,0 +1,15 @@
+.header__links-container {  
+    margin-right: 101px;  
+  }
+
+@media screen and (max-width: 872px) {
+    .header__links-container {    
+        margin-right: 42px;  
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .header__links-container {
+        margin-right: 14px;
+    }
+}

@@ -1,0 +1,32 @@
+@import url('./__title/technologies__title.css');
+@import url('./__container/technologies__container.css');
+@import url('./__text/technologies__text.css');
+@import url('./__js-logo/technologies__js-logo.css');
+
+.technologies {
+    width: auto;
+    background: #F5F6F7;
+    padding-top: 80px;
+    padding-left: 104px;
+    padding-bottom: 85px;
+    padding-right: 230px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {    
+    .technologies {
+        flex-direction: column;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .technologies {
+        padding-top: 32px;
+        padding-bottom: 52px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

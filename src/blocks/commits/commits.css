@@ -1,0 +1,32 @@
+@import url('./__header-container/commits__header-container.css');
+@import url('./__link/commits__link.css');
+@import url('./__button-github/commits__button-github.css');
+@import url('./__card/commits__card.css');
+@import url('./__profile/commits__profile.css');
+@import url('./__info/commits__info.css');
+@import url('./__avatar/commits__avatar.css');
+@import url('./__date/commits__date.css');
+@import url('./__name/commits__name.css');
+@import url('./__mail/commits__mail.css');
+@import url('./__text/commits__text.css');
+
+.commits {
+    background: #F5F6F7;
+    padding-top: 72px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {    
+    .commits {
+        padding-top: 40px;        
+    }
+}
+
+@media screen and (max-width: 580px) {    
+    .commits {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
+}

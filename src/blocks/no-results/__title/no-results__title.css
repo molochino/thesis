@@ -1,0 +1,10 @@
+.no-results__title {
+    width: fit-content;
+    margin: 0;
+    font-family: Roboto Slab, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: #1A1B22;
+    text-align: center;
+}

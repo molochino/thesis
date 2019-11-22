@@ -1,0 +1,9 @@
+.analytics__mention-numbers-container_bottom {
+    top: 605px;
+}
+
+@media screen and (max-width: 320px) {    
+    .analytics__mention-numbers-container_bottom {
+        display: none;
+    }
+}

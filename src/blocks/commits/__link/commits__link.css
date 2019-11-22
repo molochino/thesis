@@ -1,0 +1,18 @@
+.commits__link {
+    margin-left: auto;
+    align-self: center;
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    width: fit-content;
+}
+
+.commits__link:hover {
+    color: #b6bcbf;
+}
+
+@media screen and (max-width: 580px) {    
+    .commits__link {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+@import url('./_analytics/header__link_analytics.css');
+@import url('./_chosen/header__link_chosen.css');
+@import url('./_theme/_index/header__link_theme_index.css');
+@import url('./_theme/_index/_chosen/header__link_theme_index_chosen.css');
+@import url('./_theme/_about/header__link_theme_about.css');
+@import url('./_theme/_about/_chosen/header__link_theme_about_chosen.css');
+
+.header__link {
+  /* color: #B6BCBF; */
+  font-size: 18px;
+  margin-left: 34px; 
+  font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif; 
+  font-weight: normal;
+}
+
+@media screen and (max-width: 540px) {
+  .header__link {
+    font-size: 16px;
+    margin-left: 11px; 
+  }
+}

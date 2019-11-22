@@ -1,0 +1,9 @@
+.glide__arrow--right {
+    margin: 0;
+    margin-right: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 1000px;
+    border-color: transparent;   
+    right: 0;  
+}

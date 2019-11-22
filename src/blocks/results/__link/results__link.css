@@ -1,0 +1,19 @@
+.results__link {
+    margin-left: auto;
+    align-self: center;
+    font-size: 18px;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.results__link:hover {
+  color: #b6bcbf;
+}
+
+@media screen and (max-width: 540px) {    
+    .results__link {
+      margin-left: 0;
+      margin-top: 16px;
+      align-self: flex-start;
+    }
+}

@@ -1,0 +1,17 @@
+.header__link_chosen {
+    border-bottom: 3px solid white;   
+    padding-bottom: 26px;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 872px) {
+  .header__link_chosen {
+    padding-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header__link_chosen {
+    padding-bottom: 14px;
+  }
+}

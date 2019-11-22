@@ -1,0 +1,15 @@
+@import url('./__slides/glide__slides.css');
+@import url('./__slide/glide__slide.css');
+@import url('./__arrows/glide__arrows.css');
+@import url('./__arrow/glide__arrow.css');
+@import url('./__arrows-image/glide__arrows-image.css');
+@import url('./__arrow--left/glide__arrow--left.css');
+@import url('./__arrow--right/glide__arrow--right.css');
+@import url('./__bullets/glide__bullets.css');
+@import url('./__bullet/glide__bullet.css');
+@import url('./__bullet/_hidden/glide__bullet_hidden.css');
+@import url('./__bullet--active/glide__bullet--active.css');
+
+.glide {
+    position: relative;
+}

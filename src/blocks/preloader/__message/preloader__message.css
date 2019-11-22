@@ -1,0 +1,14 @@
+.preloader__message {
+	position: absolute;
+	margin: 0;
+	margin-top: 180px;	
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	color: #B6BCBF;	
+}

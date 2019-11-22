@@ -1,0 +1,15 @@
+.footer__copyright {
+    margin: 0;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 540px) {
+    .footer__copyright {
+        position: absolute;
+        bottom: 22px;
+    }
+}

@@ -1,0 +1,25 @@
+@import url('./__text/clients__text.css');
+@import url('./__paragraph/clients__paragraph.css');
+
+.clients {
+    width: auto;
+    padding-top: 80px;
+    padding-left: 104px;
+    padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1024px) {    
+    .clients {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .clients {
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 24px;
+    }
+}

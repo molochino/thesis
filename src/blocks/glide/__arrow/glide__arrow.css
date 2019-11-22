@@ -1,0 +1,19 @@
+.glide__arrow {
+    /* position: relative; */
+    position: absolute;
+    padding: 0;
+    border: none;
+    
+}
+
+.glide__arrow:active {
+    outline: none;
+}
+
+.glide__arrow:focus {
+    outline: none;
+}
+
+.glide__arrow:hover {
+    transform: scale(1.1);
+}

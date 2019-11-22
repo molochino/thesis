@@ -1,0 +1,26 @@
+.results__card-info {   
+    margin: 0;
+    width: auto;
+    height: auto;
+    position: relative;   
+    flex: 1 1 auto;  
+    display: flex;
+    flex-direction: column;  
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 54px;
+}
+
+@media screen and (max-width: 872px) {    
+    .results__card-info {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+}
+
+@media screen and (max-width: 540px) {    
+    .results__card-info {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+}

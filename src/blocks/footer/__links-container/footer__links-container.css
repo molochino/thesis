@@ -1,0 +1,23 @@
+.footer__links-container {
+    margin: 0;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;  
+}
+
+@media screen and (max-width: 705px) {
+    .footer__links-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer__links-container {
+        display: flex;
+        flex-direction:  column;
+        height: 120px;
+        justify-content: space-between;
+    }
+}
