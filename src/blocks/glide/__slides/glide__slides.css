@@ -1,6 +1,7 @@
 .glide__slides {
     width: 100%;
     justify-content: center;
+    /* margin: auto; */
 }
 
 @media screen and (max-width: 768px) {   

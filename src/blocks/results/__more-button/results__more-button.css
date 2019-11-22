@@ -6,6 +6,7 @@
     margin-top: 64px;  
     background: #ffffff;
     border-radius: 80px;  
+    display: none;
 }
   
 .results__more-button:hover {
