@@ -11,6 +11,11 @@
     box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
 }
 
+.search__submit-button:disabled {
+    color: graytext;
+    background-color: buttonface;
+}
+
 .search__submit-button:hover {
     cursor: pointer;
     background: #347EFF;

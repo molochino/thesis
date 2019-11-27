@@ -1,10 +1,10 @@
 export class Api {
     constructor(options) {
-        this.options = options;
+        this._options = options;
     }
 
     _constructUrl() {        
-        return Object.values(this.options).reduce((url, item) => url + item)            
+        return Object.values(this._options).reduce((url, item) => url + item)            
     }
 
     getNews() {        

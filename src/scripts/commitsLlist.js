@@ -2,11 +2,8 @@ import * as url from "../images/blank-avatar.jpg"
 
 export class CommitsList {
     constructor(container, cardsArray) {
-        this.container = container;
-        this.cards = cardsArray;                 
-        
-        this.clearList();
-        this.render();    
+        this._container = container;
+        this._cards = cardsArray;       
     }
 
     _createElement(type, userClasses) {
@@ -89,16 +86,16 @@ export class CommitsList {
     }
 
     clearList() {
-        while (this.container.hasChildNodes()) {
-            this.container.removeChild(this.container.lastChild);
-        }
+        Array.from(this._container.childNodes).forEach((item) => {            
+            this._container.removeChild(item)
+        })
     }
     
     _addCard(cardsItem) {         
-        this.container.appendChild(this._makeCard(cardsItem)) 
+        this._container.appendChild(this._makeCard(cardsItem)) 
     }
 
     render() {        
-        this.cards.forEach((item) => this._addCard(item))        
+        this._cards.forEach((item) => this._addCard(item))        
     }
 }
