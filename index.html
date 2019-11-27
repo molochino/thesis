@@ -7,11 +7,12 @@
     <meta name="description" content="Дипломная работа Я.Практикум. Поиск упоминаний в новостях"> 
     <meta name="author" content="Булатасов Игорь">    
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/main.fb3e1a4be7226e54a626.css">
+    <link rel="stylesheet" href="./styles/main.16ce98a3bc7e28c98e5a.css">
 </head>
 <body class="page">    
     
-    <section class="search">        
+    <section class="search"> 
+        
         <header class="header header_index-underline header_image-background">        
             <a class="link header__logo" href="./index.html">NewsAnalyzer</a>
             <div class="header__links-container">
@@ -19,28 +20,29 @@
                 <a class="link header__link header__link_theme_index" href="./about.html">О проекте</a>
             </div>
         </header>    
-
+    
         <div class="search__container">
             <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
 
             <form class="search__form" name="search__form">
-                <input type="text" class="search__input" placeholder="Введите тему новости" name="query">
-                <input type="submit" class="search__submit-button" value="Искать">
-            </form>
+                <input type="text" class="search__input" placeholder="Введите тему новости" name="query" minlength="1" required>                
+                <input type="submit" class="search__submit-button" value="Искать" name="button">                           
+            </form>          
         </div>        
+        
     </section>
 
-    <section class="preloader">
+    <section class="preloader">        
         <div class="preloader__circle">
         </div>
-        <h2 class="preloader__message">Идет поиск новостей...</h2>
+        <h2 class="preloader__message">Идет поиск новостей...</h2>         
     </section>
 
-    <section class="no-results">
+    <section class="no-results">        
         <img src="./images/not_found.png" alt="Нет результатов по запросу" class="no-results__image">
         <h2 class="no-results__title">Ничего не найдено</h2>
-        <p class="no-results__text">К сожалению, по вашему запросу ничего не найдено</p>
+        <p class="no-results__text">К сожалению, по вашему запросу ничего не найдено</p>               
     </section>
 
     <section class="results">
@@ -56,21 +58,7 @@
         </div>
 
         <div class="results__cards-container">
-            <!-- <a class="link results__card-link" href="https://lenta.ru/" target="_blank">
-                <div class="results__card">
-                    <img src="./images/image_08.png" class="results__card-image" alt="Изображение результатов поиска 1">
-                    <div class="results__card-info">
-                        <p class="results__card-date">2 августа, 2019</p>
-                        <h3 class="results__card-title">Национальное достояние – парки</h3>
-                        <p class="results__card-text">
-                            В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – 
-                            охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                        </p>                            
-                    </div>   
-                    
-                    <p class="results__card-source">Лента.ру</p>
-                </div>
-            </a>                         -->
+            
         </div>
         
         <div class="results__more-button">
@@ -107,6 +95,6 @@
         </div>
     </footer>
     
-    <script src="main.2a7ff5bf0c31fa85f091.js"></script>    
+    <script src="main.86fc2663f2d6f9c468a7.js"></script>    
 </body>
 </html>
