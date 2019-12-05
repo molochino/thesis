@@ -18,16 +18,25 @@ function countMentionsInHeaders(storage) {
 
 function countNewsMentionsByWeek() {
     let newsMentionsByWeek = {};
-
-    for (let i = 0; i < 7; i++) {
-        newsMentionsByWeek[getPastDate(i)] = 0;   
+    let newsMentionsByWeekSorted = {};
+   
+    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {
+        if (!Array.from(Object.keys(newsMentionsByWeek)).includes(newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)])) {
+            newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)] = 0;
+        }
     }
 
-    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {        
-        newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++
+    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {               
+        newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++        
     }
+
+    Object.keys(newsMentionsByWeek).sort().forEach(key => {
+        newsMentionsByWeekSorted[key] = newsMentionsByWeek[key]
+    })
+
+    console.log(newsMentionsByWeekSorted);
     
-    return newsMentionsByWeek;
+    return newsMentionsByWeekSorted;
 }
 
 function getArticlesFromStorage(storage) {
@@ -98,12 +107,12 @@ function renderDiagram(newsMentionsByWeek) {
     analyticsChartHeaderMonth.textContent = `(${months[Object.keys(newsMentionsByWeek)[0].slice(5,7)]})`;
 
     dates.forEach((item, index) => {        
-        item.textContent = Math.abs(parseInt(Object.keys(newsMentionsByWeek)[dates.length - index - 1].slice(-2))) + ', ' + daysOfWeek[new Date(Object.keys(newsMentionsByWeek)[dates.length - index - 1]).getDay()];
+        item.textContent = Math.abs(Object.keys(newsMentionsByWeek)[index].slice(-2)) + ', ' + daysOfWeek[new Date(Object.keys(newsMentionsByWeek)[index]).getDay()];
     })    
 
     mentions.forEach((item, index) => {
-        item.textContent = Object.values(newsMentionsByWeek)[dates.length - index - 1]
-        item.style.width =  `${onePercentWidthValue * Object.values(newsMentionsByWeek)[dates.length - index - 1]}px`
+        item.textContent = Object.values(newsMentionsByWeek)[index]
+        item.style.width =  `${onePercentWidthValue * Object.values(newsMentionsByWeek)[index]}px`
     })
 }
 
