@@ -4,7 +4,8 @@ export class CardList {
     constructor(container, cardsArray) {
         this._container = container;
         this._cards = cardsArray;   
-        this._renderedCards = 0;         
+        this._renderedCards = 0;     
+        this._moreButton = document.querySelector('.results__more-button');   
     }
 
     _createElement(type, userClasses) {
@@ -88,20 +89,19 @@ export class CardList {
     }
     
     render() {         
-        const cardsToRender = 3;
-        const moreButton = document.querySelector('.results__more-button');
+        const cardsToRender = 3;        
         
         if (this._renderedCards + cardsToRender >= this._cards.length) {
             for (let i = this._renderedCards; i < this._cards.length; i++) {
                 this._addCard(this._cards[i]);            
             }    
             this._renderedCards = this._cards.length;
-            moreButton.style.display = 'none';
+            this._moreButton.style.display = 'none';
         } else {
             for (let i = this._renderedCards; i < this._renderedCards + cardsToRender; i++) {
                 this._addCard(this._cards[i]);            
             }  
             this._renderedCards = this._renderedCards + cardsToRender;  
-        }         
+        }          
     }
 }

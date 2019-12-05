@@ -1,8 +1,20 @@
 .results__card-image {  
-    width: 100%;  
-    max-height: 272px;
+    max-width: 100%;  
+    height: 272px;
     /* max-width: 400px; */
-    /* object-fit: fill; */
+    object-fit: fill;    
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+}
+
+@media screen and (max-width: 872px) {
+    .results__card-image {
+        height: 150px;   
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .results__card-image {
+        height: 196px;   
+    }
 }

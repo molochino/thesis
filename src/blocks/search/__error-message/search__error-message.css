@@ -1,0 +1,25 @@
+@keyframes fading-message{
+    from {        
+       opacity:  1;
+       visibility: visible;
+    }
+
+    to {
+        opacity:  0;
+        visibility: hidden;
+    }
+}
+
+.search__error-message {
+    animation: fading-message 5s forwards;
+    top: -50px;
+    right: 50px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    display: none;    
+}
+

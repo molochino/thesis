@@ -16,7 +16,7 @@
     padding-bottom: 115px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 872px) {
     .analytics {
         padding-top: 40px;
         padding-right: 40px;
@@ -25,7 +25,7 @@
     }    
 } 
 
-@media screen and (max-width: 320px) {    
+@media screen and (max-width: 540px) {    
     .analytics {
         padding-top: 24px;
         padding-right: 16px;

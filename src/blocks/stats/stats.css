@@ -5,24 +5,38 @@
 @import url('./__text/stats__text.css');
 @import url('./__numbers/stats__numbers.css');
 
-.stats {
+.stats {    
     padding-top: 40px;
-    padding-left: 104px;
+    margin-left: 104px;
     padding-bottom: 80px;
+    max-width: 1440px;    
+}
+
+@media screen and (min-width: 1660px) {
+    .stats {
+      margin-left: 0;
+      margin: auto;      
+    }
+  }
+
+@media screen and (max-width: 872px) {
+    .stats {  
+        margin-left: 40px;          
+    }    
 }
 
 @media screen and (max-width: 768px) {
     .stats {
         padding-top: 32px;
         padding-bottom: 40px;
-        padding-left: 40px;
+        margin-left: 40px;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 540px) {
     .stats {
         padding-top: 16px;
         padding-bottom: 24px;
-        padding-left: 16px;
+        margin-left: 16px;
     }
 }

@@ -4,12 +4,12 @@
 @import url('./__js-logo/technologies__js-logo.css');
 
 .technologies {
-    width: auto;
+    width: auto;    
     background: #F5F6F7;
     padding-top: 80px;
-    padding-left: 104px;
+    /* padding-left: 104px; */
     padding-bottom: 85px;
-    padding-right: 230px; 
+    /* padding-right: 230px;  */
     display: flex;
     justify-content: space-between;
 }
@@ -17,8 +17,10 @@
 @media screen and (max-width: 1024px) {    
     .technologies {
         flex-direction: column;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        /* padding-left: 40px; */
+        /* padding-right: 40px; */
     }
 }
 
@@ -26,7 +28,7 @@
     .technologies {
         padding-top: 32px;
         padding-bottom: 52px;
-        padding-left: 16px;
-        padding-right: 16px;
+        /* padding-left: 16px; */
+        /* padding-right: 16px; */
     }
 }

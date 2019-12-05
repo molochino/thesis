@@ -5,22 +5,42 @@
 
 .author {
     width: auto;
+
+    max-width: 1440px;
+    margin: auto;
+    margin-left: 104px;
+
     display: flex;
     flex-direction: row;   
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
+@media screen and (min-width: 1660px) {
+  .author {
+    margin-left: 0;
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 872px) {
-    .author {    
+    .author {  
+      margin-left: 40px;  
       padding-top: 40px;
       padding-bottom: 40px;
     }    
 }
 
+@media screen and (max-width: 760px) {    
+  .author {
+    margin-left: 16px;    
+  }  
+}
+
 @media screen and (max-width: 540px) {
     .author {
       flex-direction: column;
+      margin-left: 16px;
       padding-top: 32px;
       padding-bottom: 24px;
     }    
