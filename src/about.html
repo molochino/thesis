@@ -86,10 +86,16 @@
             <a class="link commits__link" href="https://github.com/molochino/thesis/commits/master" target="_blank" >Открыть в Github <img src="<%=require('../src/images/Path.png')%>" alt="Иконка пути" class="results__path-icon"></a>
         </div>
 
+        <div class="commits__error-message">
+            <p class="commits__error-message-text">
+                Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Не удалось загрузить историю коммитов.
+            </p>
+        </div>
+
         <div class="glide">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
-                    <li class="glide__slide">
+                    <!-- <li class="glide__slide">
                         <a href="https://github.com/molochino/thesis/commit/bbe96270ea73a347cf963f7e58ac2ad1060e98d9" target="_blank" class="link commits__single-commit-link">
                             <div class="commits__card">
                                 <p class="commits__date"> 14 августа, 2019</p>
@@ -182,7 +188,7 @@
                                 </p>
                             </div>
                         </a>                            
-                    </li>                                    
+                    </li>                                     -->
                 </ul>
             </div>
 

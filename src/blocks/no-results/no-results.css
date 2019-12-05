@@ -3,11 +3,12 @@
 @import url('./__image/no-results__image.css');
 
 .no-results {  
-    width: auto;
+    width: auto;    
     padding-top: 86px;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     display: none;
+    background-color: #F5F6F7;
 }

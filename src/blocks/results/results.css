@@ -13,6 +13,8 @@
 @import url('./__card-source/results__card-source.css');
 @import url('./__more-button/results__more-button.css');
 @import url('./__more-button-text/results__more-button-text.css');
+@import url('./__error-message/results__error-message.css');
+@import url('./__error-message-text/results__error-message-text.css');
 
 .results {  
     width: auto;
@@ -22,6 +24,7 @@
     padding-bottom: 80px;
     padding-left: 104px;
     padding-right: 104px;
+    display: none;
 }
 
 @media screen and (max-width: 1250px) {  
