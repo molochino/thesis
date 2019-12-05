@@ -18,23 +18,19 @@ function countMentionsInHeaders(storage) {
 
 function countNewsMentionsByWeek() {
     let newsMentionsByWeek = {};
-    let newsMentionsByWeekSorted = {};
-   
-    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {
-        if (!Array.from(Object.keys(newsMentionsByWeek)).includes(newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)])) {
+    let newsMentionsByWeekSorted = {};   
+
+    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {       
+        if (!Array.from(Object.keys(newsMentionsByWeek)).includes(JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10))) {
             newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)] = 0;
         }
-    }
-
-    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {               
+        
         newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++        
     }
 
     Object.keys(newsMentionsByWeek).sort().forEach(key => {
         newsMentionsByWeekSorted[key] = newsMentionsByWeek[key]
-    })
-
-    console.log(newsMentionsByWeekSorted);
+    })   
     
     return newsMentionsByWeekSorted;
 }
