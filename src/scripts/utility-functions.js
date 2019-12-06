@@ -1,7 +1,15 @@
+const dates = document.querySelectorAll('.analytics__date');
+const mentions = document.querySelectorAll('.analytics__mentions');
+const analyticsChartHeaderDiagram = document.querySelector('.analytics__chart-header-diagram');
+const analyticsChartHeaderMonth = document.querySelector('.analytics__chart-header-month');
+const statsTitle = document.querySelector('.stats__title');
+const statsNumbersWeek = document.querySelector('.stats__numbers_week');
+const statsNumbersHeaders = document.querySelector('.stats__numbers_headers');
+
 function countMentionsInHeaders(storage) {
     let counter = 0;
     for (let i = 0; i < storage.getItem('numberOfArticles'); i++) {
-        if (JSON.parse(storage.getItem(i)).title.toLowerCase().includes(storage.getItem('query'))) {
+        if (JSON.parse(storage.getItem(i)).title.toLowerCase().includes(storage.getItem('query').toLowerCase())) {
             counter++
         }        
     }
@@ -10,20 +18,25 @@ function countMentionsInHeaders(storage) {
 
 function countNewsMentionsByWeek() {
     let newsMentionsByWeek = {};
+    let newsMentionsByWeekSorted = {};   
 
-    for (let i = 0; i < 7; i++) {
-        newsMentionsByWeek[getPastDate(i)] = 0;   
+    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {       
+        if (!Array.from(Object.keys(newsMentionsByWeek)).includes(JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10))) {
+            newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)] = 0;
+        }
+        
+        newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++        
     }
 
-    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {
-        newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++
-    }
-
-    return newsMentionsByWeek;
+    Object.keys(newsMentionsByWeek).sort().forEach(key => {
+        newsMentionsByWeekSorted[key] = newsMentionsByWeek[key]
+    })   
+    
+    return newsMentionsByWeekSorted;
 }
 
 function getArticlesFromStorage(storage) {
-    let restoredArticles = {};
+    let restoredArticles = [];
     for (let i = 0; i < storage.getItem('numberOfArticles'); i++) {
         restoredArticles[i] = JSON.parse(storage[i]);
     }   
@@ -41,24 +54,25 @@ function getCurrentDate() {
 }
 
 function getPastDate(days) {
-    let date = new Date();    
-
-    let month = date.getMonth() + 1;    
+    let date = new Date();
+    let day;        
 
     let copyOfDate = new Date();
-    copyOfDate.setDate(date.getDate() - days);   
-    let day = copyOfDate.getDate();    
+    copyOfDate.setDate(date.getDate() - days);    
+    if (copyOfDate.getDate().toString().length == 1) {
+        day = '0' + copyOfDate.getDate(); 
+    } else {
+        day = copyOfDate.getDate(); 
+    }    
+    
+    let month = copyOfDate.getMonth() + 1;  
 
-    let year = date.getFullYear();
+    let year = copyOfDate.getFullYear();    
     
     return (year + '-' + month + '-' + day)
 }
 
-function renderDiagram(newsMentionsByWeek) {
-    const dates = document.querySelectorAll('.analytics__date');
-    const mentions = document.querySelectorAll('.analytics__mentions');
-    const analyticsChartHeaderDiagram = document.querySelector('.analytics__chart-header-diagram');
-    const analyticsChartHeaderMonth = document.querySelector('.analytics__chart-header-month');
+function renderDiagram(newsMentionsByWeek) {    
     let onePercentWidthValue = analyticsChartHeaderDiagram.offsetWidth / 100;
 
     const daysOfWeek = {
@@ -88,21 +102,17 @@ function renderDiagram(newsMentionsByWeek) {
 
     analyticsChartHeaderMonth.textContent = `(${months[Object.keys(newsMentionsByWeek)[0].slice(5,7)]})`;
 
-    dates.forEach((item, index) => {
-        item.textContent = Object.keys(newsMentionsByWeek)[dates.length - index - 1].slice(-2) + ', ' + daysOfWeek[new Date(Object.keys(newsMentionsByWeek)[dates.length - index - 1]).getDay()];
+    dates.forEach((item, index) => {        
+        item.textContent = Math.abs(Object.keys(newsMentionsByWeek)[index].slice(-2)) + ', ' + daysOfWeek[new Date(Object.keys(newsMentionsByWeek)[index]).getDay()];
     })    
 
     mentions.forEach((item, index) => {
-        item.textContent = Object.values(newsMentionsByWeek)[dates.length - index - 1]
-        item.style.width =  `${onePercentWidthValue * Object.values(newsMentionsByWeek)[dates.length - index - 1]}px`
+        item.textContent = Object.values(newsMentionsByWeek)[index]
+        item.style.width =  `${onePercentWidthValue * Object.values(newsMentionsByWeek)[index]}px`
     })
 }
 
-function renderStats() {
-    const statsTitle = document.querySelector('.stats__title');
-    const statsNumbersWeek = document.querySelector('.stats__numbers_week');
-    const statsNumbersHeaders = document.querySelector('.stats__numbers_headers');
-    
+function renderStats() {    
     statsTitle.textContent = `Вы спросили: "${localStorage.getItem('query')}"`
     statsNumbersWeek.textContent = localStorage.getItem('numberOfArticles');
     statsNumbersHeaders.textContent = countMentionsInHeaders(localStorage);

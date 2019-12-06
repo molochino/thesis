@@ -1,8 +1,8 @@
 .author__avatar {  
-    width: 464px;
-    margin-left: 104px;
+    width: 464px;    
     height: 464px;  
     border-radius: 1000px;  
+    object-fit: cover;
 }
 
 @media screen and (max-width: 1230px) {
@@ -20,8 +20,7 @@
 }
 
 @media screen and (max-width: 872px) {      
-    .author__avatar {
-      margin-left: 40px;    
+    .author__avatar {      
       height: 232px;
       width: 232px;
     }    

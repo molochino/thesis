@@ -27,12 +27,12 @@
     display: none;
 }
 
-@media screen and (max-width: 1250px) {  
+/* @media screen and (max-width: 1250px) {  
   .results {
     padding-left: 80px;
     padding-right: 80px;    
   }
-}
+} */
 
 @media screen and (max-width: 872px) {  
     .results {

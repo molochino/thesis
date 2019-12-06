@@ -1,8 +1,6 @@
-
 @import url('./__link/header__link.css');
 @import url('./__logo/header__logo.css');
 @import url('./__logo/_about/header__logo_about.css');
-@import url('./__links-container/header__links-container.css');
 @import url('./_index-underline/header_index-underline.css');
 @import url('./_about-underline/header_about-underline.css');
 
@@ -10,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: auto;
+  width: auto;  
   height: 80px;    
 }
 

@@ -8,6 +8,7 @@ commitsErrorMessage.style.display = 'none';
 const glideArrows = document.querySelector('.glide__arrows');
 const glideBullets = document.querySelector('.glide__bullets');
 const glide = document.querySelector('.glide');
+const glideSlides = document.querySelector('.glide__slides');
 
 let api = new Api({
     baseUrl: 'https://api.github.com/repos/molochino/thesis/commits'     
@@ -15,7 +16,7 @@ let api = new Api({
 
 api.getCommits()
     .then((result) => {        
-        let commitsList = new CommitsList(document.querySelector('.glide__slides'), result);
+        let commitsList = new CommitsList(glideSlides, result);
         commitsList.clearList();
         commitsList.render();    
 
@@ -33,7 +34,8 @@ api.getCommits()
                 768: {
                     gap: 8,
                     focusAt: 0,
-                    peek: 40
+                    peek: 40,
+                    perView: 2
                 },
                 600: {
                     perView: 1,

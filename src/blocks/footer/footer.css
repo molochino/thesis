@@ -10,11 +10,15 @@
     display: flex;
     padding-left: 104px;
     padding-right: 104px;
+
+    max-width: 1440px;
+    margin: 0 auto;
+
     justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (max-width: 872px) {
+@media screen and (max-width: 892px) {
     .footer {
         padding-left: 40px;
         padding-right: 40px;

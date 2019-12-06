@@ -13,12 +13,14 @@
     
     <section class="search"> 
         
-        <header class="header header_index-underline header_image-background">        
-            <a class="link header__logo" href="./index.html">NewsAnalyzer</a>
-            <div class="header__links-container">
-                <a class="link header__link header__link_chosen header__link_theme_index header__link_theme_index_chosen" href="#">Главная</a>
-                <a class="link header__link header__link_theme_index" href="./about.html">О проекте</a>
-            </div>
+        <header class="header header_index-underline header_image-background">  
+            <div class="wrapper wrapper_header">
+                <a class="link header__logo" href="./index.html">NewsAnalyzer</a>
+                <div class="header__links-container">
+                    <a class="link header__link header__link_chosen header__link_theme_index header__link_theme_index_chosen" href="#">Главная</a>
+                    <a class="link header__link header__link_theme_index" href="./about.html">О проекте</a>
+                </div>
+            </div>               
         </header>    
     
         <div class="search__container">
@@ -26,7 +28,8 @@
             <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
 
             <form class="search__form" name="search__form">
-                <input type="text" class="search__input" placeholder="Введите тему новости" name="query" minlength="1" required>                
+                <div class="search__error-message"></div>
+                <input type="text" class="search__input" placeholder="Введите тему новости" name="query">                
                 <input type="submit" class="search__submit-button" value="Искать" name="button">                           
             </form>          
         </div>        
@@ -46,39 +49,43 @@
     </section>
 
     <section class="results">
-        <div class="results__header-container">
-            <h2 class="results__title title">Результаты поиска</h2>
-            <a class="link results__link" href="./paper.html">Посмотреть аналитику  <img src="<%=require('../src/images/Path.png')%>" alt="Иконка пути" class="results__path-icon"></a>
-        </div>
-
-        <div class="results__error-message">
-            <p class="results__error-message-text">
-                Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз
-            </p>
-        </div>
-
-        <div class="results__cards-container">
-            
+        <div class="wrapper">
+            <div class="results__header-container">
+                <h2 class="results__title title">Результаты поиска</h2>
+                <a class="link results__link" href="./paper.html">Посмотреть аналитику  <img src="<%=require('../src/images/Path.png')%>" alt="Иконка пути" class="results__path-icon"></a>
+            </div>
+        
+            <div class="results__error-message">
+                <p class="results__error-message-text">
+                    Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз
+                </p>
+            </div>
+        
+            <div class="results__cards-container">
+                
+            </div>
+                
+            <div class="results__more-button">
+                <p class="results__more-button-text">Показать еще</p>
+            </div>
         </div>
         
-        <div class="results__more-button">
-            <p class="results__more-button-text">Показать еще</p>
-        </div>
     </section>        
 
-    <section class="author">
-        <img class="author__avatar" src="<%=require('../src/images/image_08.png')%>" alt="Аватар автора">
-        <div class="author__info">
-            <h2 class="author__title title">Об авторе</h2>
-            <p class="author__text">
-                Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.
-                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
-            </p>
-        </div>            
+    <section class="author">        
+            <img class="author__avatar" src="<%=require('../src/images/avatar.png')%>" alt="Аватар автора">
+            <div class="author__info">
+                <h2 class="author__title title">Об авторе</h2>
+                <p class="author__text">
+                    Привет. Меня зовут Игорь. Чуть больше полугода назад я решил заняться фронтенд-разработкой. 
+                    Благодаря Яндекс.Практикуму я научился верстать сайты, работать с макетами, создавать адаптивные интерфейсы, работать со стилями, освоил JavaScript, основы работы с Webpack и Git. 
+                    Результат обучения можно увидеть на примере этого проекта. Проект небольшой, но он создан с усердием и демонстрирует все то, чему я научился =)
+                </p>
+            </div>         
     </section>
 
     <footer class="footer">
-        <p class=footer__copyright>© 2019  Supersite</p>
+        <p class=footer__copyright>© 2019  Булатасов Игорь</p>
         <div class="footer__links-container">
             <a href="./index.html" class="link footer__link">Главная</a>
             <a href="./about.html" class="link footer__link">О проекте</a>

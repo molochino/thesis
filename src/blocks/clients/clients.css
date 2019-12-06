@@ -6,20 +6,32 @@
     padding-top: 80px;
     padding-left: 104px;
     padding-bottom: 94px;
+    max-width: 1440px; 
 }
 
-@media screen and (max-width: 1024px) {    
+@media screen and (min-width: 1660px) {
     .clients {
-        padding-left: 60px;
-        padding-right: 60px;
+      padding-left: 0px;      
+      margin: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .clients {
+        padding-right: 80px;
+    }    
+}
+
+@media screen and (max-width: 872px) {    
+    .clients {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .clients {
-        padding-top: 30px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-top: 30px;       
         padding-bottom: 24px;
     }
 }

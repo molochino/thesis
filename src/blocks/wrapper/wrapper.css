@@ -1,0 +1,7 @@
+@import url('./_header/wrapper_header.css');
+@import url('./_technologies/wrapper_technologies.css');
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
