@@ -5,6 +5,7 @@ const analyticsChartHeaderMonth = document.querySelector('.analytics__chart-head
 const statsTitle = document.querySelector('.stats__title');
 const statsNumbersWeek = document.querySelector('.stats__numbers_week');
 const statsNumbersHeaders = document.querySelector('.stats__numbers_headers');
+const numberOfDaysToLookBack = 6;
 
 function countMentionsInHeaders(storage) {
     let counter = 0;
@@ -18,15 +19,17 @@ function countMentionsInHeaders(storage) {
 
 function countNewsMentionsByWeek() {
     let newsMentionsByWeek = {};
-    let newsMentionsByWeekSorted = {};   
+    let newsMentionsByWeekSorted = {}; 
 
-    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {       
-        if (!Array.from(Object.keys(newsMentionsByWeek)).includes(JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10))) {
-            newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)] = 0;
-        }
-        
-        newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++        
-    }
+    for (let i = 0; i <= numberOfDaysToLookBack; i++) {
+        newsMentionsByWeek[getPastDate(localStorage.getItem('dateTo'), i)] = 0;
+    }    
+
+    for (let i = 0; i < localStorage.getItem('numberOfArticles'); i++) {            
+        if (Array.from(Object.keys(newsMentionsByWeek)).includes(JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10))) {
+            newsMentionsByWeek[JSON.parse(localStorage.getItem(i)).publishedAt.slice(0, 10)]++        
+        }        
+    }    
 
     Object.keys(newsMentionsByWeek).sort().forEach(key => {
         newsMentionsByWeekSorted[key] = newsMentionsByWeek[key]
@@ -53,11 +56,11 @@ function getCurrentDate() {
     return (year + '-' + month + '-' + day)
 }
 
-function getPastDate(days) {
-    let date = new Date();
+function getPastDate(dateTo, days) {
+    let date = new Date(dateTo);
     let day;        
 
-    let copyOfDate = new Date();
+    let copyOfDate = new Date(dateTo);
     copyOfDate.setDate(date.getDate() - days);    
     if (copyOfDate.getDate().toString().length == 1) {
         day = '0' + copyOfDate.getDate(); 
@@ -120,12 +123,13 @@ function renderStats() {
 
 function saveInStorage(result) {
     
-    for (let i = 0; i < result.articles.length; i++) {
-        localStorage.setItem(i, JSON.stringify(result.articles[i]))        
+    for (let i = 0; i < result.articles.length; i++) {        
+        localStorage.setItem(i, JSON.stringify(result.articles[i]))         
     }   
     localStorage.setItem('numberOfArticles', result.articles.length);                   
     localStorage.setItem('totalNumberOfNews', result.totalResults);  
-    localStorage.setItem('dateToday', getCurrentDate());               
+    localStorage.setItem('dateTo', getCurrentDate());    
+    localStorage.setItem('dateFrom', getPastDate(numberOfDaysToLookBack));           
 }
 
 export {countMentionsInHeaders, countNewsMentionsByWeek, getArticlesFromStorage, getCurrentDate, getPastDate, renderDiagram, renderStats, saveInStorage};
