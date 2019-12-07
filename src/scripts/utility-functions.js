@@ -10,9 +10,15 @@ const numberOfDaysToLookBack = 6;
 function countMentionsInHeaders(storage) {
     let counter = 0;
     for (let i = 0; i < storage.getItem('numberOfArticles'); i++) {
-        if (JSON.parse(storage.getItem(i)).title.toLowerCase().includes(storage.getItem('query').toLowerCase())) {
-            counter++
-        }        
+        try {
+            if (JSON.parse(storage.getItem(i)).title.toLowerCase().includes(storage.getItem('query').toLowerCase())) {
+                counter++
+            }      
+        }
+        catch(e) {
+            
+        }
+          
     }
     return counter;
 }
