@@ -3,6 +3,7 @@ import {Api} from "./scripts/api.js";
 import {CardList} from "./scripts/cardList.js";
 import {getCurrentDate, getPastDate, saveInStorage, getArticlesFromStorage} from "./scripts/utility-functions.js";
 import {Validation} from "./scripts/validation.js";
+import {Card} from "./scripts/card.js"
 
 const form = document.forms.search__form;
 let list;
@@ -14,6 +15,8 @@ const resultsError = document.querySelector('.results__error-message');
 const cardContainer = document.querySelector('.results__cards-container');
 const numberOfDaysToLookBack = 6;
 const preloader = document.querySelector('.preloader'); 
+
+const createCard = (...args) => new Card (...args).makeCard();
 
 let validation = new Validation ();
 
@@ -32,7 +35,7 @@ function drawCards(articles) {
     resultsLink.style.display = 'block'; 
     cardContainer.style.display = 'grid';
 
-    list = new CardList(cardContainer, articles);  
+    list = new CardList(cardContainer, articles, createCard);  
     list.clearList();
     list.render();               
 }
@@ -60,7 +63,7 @@ form.addEventListener('submit', function(event) {
             baseUrl: 'https://newsapi.org/v2/everything?',    
             query: `q=${form.query.value}&`,        
             fromDate: `from=${getCurrentDate()}&`,
-            toDate: `to=${getPastDate(numberOfDaysToLookBack)}&`,
+            toDate: `to=${getPastDate(getCurrentDate(), numberOfDaysToLookBack)}&`,
             lang: 'language=ru&',
             pageSize: 'pageSize=100&',
             apiKey: 'apiKey=67f58f12c67744ffb7a0bd169d0d09e0',
@@ -71,7 +74,7 @@ form.addEventListener('submit', function(event) {
                 if (result.articles.length > 0) {                 
                     localStorage.clear();              
                     saveInStorage(result);                                    
-                    localStorage.setItem('query', form.query.value);
+                    localStorage.setItem('query', form.query.value);                   
                                         
                     drawCards(result.articles)               
                 } else {                            
